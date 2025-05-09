@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Showcase Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="hero">
+        <div class="hero-text-block">
+          <h1 class="brand-name">HIMDEURA</h1>
+          <p class="brand-motto">One stop solution for the complete range of sanitaryware and piping solutions.</p>
+        </div>
+      </section>
+      
+  <div class="container">
+    <h2>Explore Our Collection</h2>
+    <p>
+      <!--Discover a curated selection of unique and innovative products. Browse our products page to learn more!-->We offer a complete range of bathroom and kitchen sanitaryware and piping solutions that complements your life with comfort and safety. We value our customers as our brand ambassadors and committed to cater them with the reliable products that are designed with passion and delivered with love.<br>
+      Browse our products page to learn more
+    </p>
+  </div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      })
+      .then(() => {
+        
+        window.addEventListener('scroll', function() {
+          const nav = document.querySelector('nav');
+          if(window.scrollY > 50){
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      });
+    </script>
+    <div id="footer-placeholder"></div>
+    <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+    </script>
+    
+</body>
+</html>

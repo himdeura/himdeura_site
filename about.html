@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Showcase</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+  <div class="container">
+    <h1>About Us</h1>
+    <p>
+      Himdeura operates with the aim of providing the complete range of sanityware and piping solution sat the best quality an dproce for it's customers all over India . Aligning to our vision of healthy liviing for all , we sell products showcasing elegance and durability . Himdeura is a brand where artisanal craftsmanship combines with latest  technology and design.
+    </p>
+    <!--<h2>Our Mission</h2>
+    <p>
+      To showcase products that spark curiosity and creativity, making it easy for you to explore and learn about what’s new and exciting.
+    </p>-->
+  </div>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('nav-placeholder').innerHTML = html;
+      })
+      .then(() => {
+        
+        window.addEventListener('scroll', function() {
+          const nav = document.querySelector('nav');
+          if(window.scrollY > 50){
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        });
+      });
+    </script>
+    <div id="footer-placeholder"></div>
+    <script>
+    fetch('footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+      });
+    </script>
+    
+</body>
+</html>
