@@ -1,5 +1,0 @@
-coming soon = false
-3
-Classic Watch
-Mountain Backpack
-Leather Wallet
