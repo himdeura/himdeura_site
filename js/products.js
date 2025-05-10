@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       // Render types as clickable buttons
       typesContainer.innerHTML = `
-        <div class="product-types-title">Our product range:</div>
+        <div class="product-types-title">Complete range of:</div>
         <div class="product-types-btns">
           ${types.map((type, idx) =>
             `<button class="product-type-btn" data-type="${type}" ${idx === 0 ? 'data-active="true"' : ''}>${type}</button>`
