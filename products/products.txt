@@ -1,5 +1,5 @@
-coming soon = true
+coming soon = false
 3
-Classic Watch
-Mountain Backpack
-Leather Wallet
+Bathroom Sanitaryware 
+Kitchen Sanitaryware  
+Piping Solutions
