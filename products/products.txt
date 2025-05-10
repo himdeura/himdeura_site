@@ -1,4 +1,4 @@
-coming soon = false
+coming soon = true
 3
 Classic Watch
 Mountain Backpack
