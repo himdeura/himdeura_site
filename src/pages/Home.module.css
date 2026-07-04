@@ -1,0 +1,240 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  background: url('/hero.png') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(13, 27, 42, 0.82) 0%,
+    rgba(13, 27, 42, 0.55) 60%,
+    rgba(13, 27, 42, 0.25) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  padding: 0 6vw;
+  max-width: 720px;
+  margin-top: 40px;
+}
+
+.heroLabel {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 5px 14px;
+  border-radius: 2px;
+  margin-bottom: 28px;
+}
+
+.heroLogo {
+  height: clamp(60px, 10vw, 120px);
+  width: auto;
+  margin-bottom: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.heroTagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: rgba(255,255,255,0.75);
+  line-height: 1.65;
+  margin-bottom: 40px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.heroScroll {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.45);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* ── Features ── */
+.features {
+  background: var(--navy);
+  padding: 0 24px;
+}
+
+.featuresInner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 44px 36px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.25s;
+}
+
+.featureItem:last-child {
+  border-right: none;
+}
+
+.featureItem:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.featureIcon {
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.featureTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.featureDesc {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+}
+
+/* ── About ── */
+.about {
+  background: var(--cream);
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.aboutTitle {
+  color: var(--navy);
+}
+
+.aboutPara {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.aboutPara strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.aboutBtn {
+  margin-top: 16px;
+}
+
+.aboutImageWrap {
+  position: relative;
+}
+
+.aboutImage {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ── CTA Banner ── */
+.ctaBanner {
+  background: var(--navy);
+  padding: 80px 24px;
+}
+
+.ctaBannerInner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.ctaSubtitle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .featuresInner {
+    grid-template-columns: 1fr;
+  }
+
+  .featureItem {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    padding: 32px 24px;
+  }
+
+  .featureItem:last-child { border-bottom: none; }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .aboutImage { height: 320px; }
+}
+
+@media (max-width: 600px) {
+  .heroContent { padding: 0 24px; }
+
+  .heroCtas {
+    flex-direction: column;
+  }
+}
