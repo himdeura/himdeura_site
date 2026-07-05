@@ -43,7 +43,7 @@ export default function Home() {
           <span className={styles.heroLabel}>Premium Sanitaryware</span>
           <img src="/hero_logo.png" alt="HIMDEURA" className={styles.heroLogo} />
           <p className={styles.heroTagline}>
-            House of Premium Bathroom &amp; Kitchen Sanitaryware<br />
+            Premium Bathroom &amp; Kitchen Sanitaryware<br />
             and Piping Solutions
           </p>
           <div className={styles.heroCtas}>

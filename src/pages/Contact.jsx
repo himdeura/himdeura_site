@@ -35,9 +35,9 @@ const contactItems = [
     ),
     label: 'Address',
     lines: [
-      'Plot No. 1581/A, 1581/B & 1582',
-      'Vishwakarma Marg, Hindon Vihar',
-      'Ghaziabad – 201003, U.P.',
+      '1581-A, Khasra No. 32',
+      'Hindon Vihar',
+      'Ghaziabad – 201001, U.P.',
     ],
   },
 ]
@@ -127,7 +127,7 @@ export default function Contact() {
                 />
               </div>
               <div className={styles.mapCaption}>
-                📍 Hindon Vihar, Ghaziabad – 201003
+                📍 Hindon Vihar, Ghaziabad – 201001
               </div>
             </div>
           </div>

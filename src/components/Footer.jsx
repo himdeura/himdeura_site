@@ -48,9 +48,9 @@ export default function Footer() {
         <div className={styles.col}>
           <h4 className={styles.colTitle}>Address</h4>
           <address className={styles.address}>
-            Plot No. 1581/A, 1581/B &amp; 1582<br />
-            Vishwakarma Marg, Hindon Vihar<br />
-            Ghaziabad – 201003<br />
+            1581-A, Khasra No. 32<br />
+            Hindon Vihar<br />
+            Ghaziabad – 201001<br />
             Uttar Pradesh, India
           </address>
         </div>
